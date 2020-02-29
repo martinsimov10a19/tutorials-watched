@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.9.3/firebase-firestore.js"></script>
+    <title>Cloud Coffe</title>
+</head>
+<body>
+    <h1>Cloud Coffee</h1>
+
+    <div class="content">
+
+        <form id="add-cafe-form">
+            <input type="text" name="name" placeholder="Coffee Name...">
+            <input type="text" name="city" placeholder="Coffee City...">
+            <button>Add Coffee</button>
+        </form>
+
+        <ul id="cafe-list"></ul>
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyBsisnrqnI3iGyQ76HWhZ-U4cokUU1WEhY",
+            authDomain: "coffee-cloud-tutorial.firebaseapp.com",
+            databaseURL: "https://coffee-cloud-tutorial.firebaseio.com",
+            projectId: "coffee-cloud-tutorial",
+            storageBucket: "coffee-cloud-tutorial.appspot.com",
+            messagingSenderId: "418467209211",
+            appId: "1:418467209211:web:89148e5c56bdafe05db55e",
+            measurementId: "G-B0X7S5JV2K"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+        const db = firebase.firestore();
+    </script>
+    <script src="app.js"></script>
+</body>
+</html>
